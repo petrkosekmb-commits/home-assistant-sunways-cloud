@@ -3,7 +3,7 @@
   "name": "Sunways",
   "codeowners": [],
   "config_flow": true,
-  "documentation": "https://github.com/adamus-tork/home-assistant-sunways",
+  "documentation": "https://github.com/petrkosekmb-commits/home-assistant-sunways-cloud",
   "iot_class": "cloud_polling",
   "version": "0.1.0"
 }
