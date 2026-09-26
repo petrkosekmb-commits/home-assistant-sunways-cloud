@@ -1,0 +1,31 @@
+{
+  "config": {
+    "abort": {"already_configured": "Tato elektrárna je už nastavena", "reauth_successful": "Opětovné přihlášení bylo úspěšné"},
+    "error": {"cannot_connect": "Připojení se nezdařilo", "invalid_auth": "Neplatné přihlašovací údaje", "no_stations_found": "Nebyla nalezena žádná elektrárna", "unknown": "Neočekávaná chyba"},
+    "step": {
+      "user": {"title": "Připojení k Sunways Portal", "description": "Zadejte přihlašovací údaje do Sunways Portal.", "data": {"email": "E-mail", "password": "Heslo", "initial_token": "Počáteční token (nepovinný)"}},
+      "station": {"title": "Výběr elektrárny", "data": {"station_id": "Elektrárna"}},
+      "reauth_confirm": {"title": "Aktualizace přihlášení", "description": "Uložené přihlašovací údaje už nefungují.", "data": {"email": "E-mail", "password": "Heslo"}}
+    }
+  },
+  "options": {"step": {"init": {"title": "Načítání dat", "data": {"scan_interval": "Interval načítání přehledu"}}}},
+  "entity": {"sensor": {
+    "solar_power": {"name": "Výkon FVE"}, "installed_power": {"name": "Instalovaný výkon"}, "efficiency": {"name": "Využití instalovaného výkonu"}, "load_power": {"name": "Spotřeba domu"},
+    "grid_power": {"name": "Výkon sítě"}, "grid_power_consumption": {"name": "Odběr ze sítě"}, "grid_power_return": {"name": "Přetok do sítě"},
+    "battery_power": {"name": "Výkon baterie"}, "battery_soc": {"name": "Stav nabití baterie"},
+    "daily_generation": {"name": "Denní výroba"}, "monthly_generation": {"name": "Měsíční výroba"}, "yearly_generation": {"name": "Roční výroba"}, "total_generation": {"name": "Celková výroba"},
+    "history_sample_time": {"name": "Čas časovaného bodu"}, "history_sample_age": {"name": "Stáří časovaného bodu"},
+    "history_grid_power": {"name": "Síť v časovaném bodu"}, "history_pv_power": {"name": "Výroba v časovaném bodu"}, "history_load_power": {"name": "Spotřeba v časovaném bodu"}, "history_battery_power": {"name": "Baterie v časovaném bodu"},
+    "cloud_received_at": {"name": "Přijetí odpovědi cloudu"}, "station_status_code": {"name": "Stavový kód elektrárny"},
+    "device_last_update": {"name": "Poslední aktualizace měniče"}, "device_total_hours": {"name": "Celková doba provozu"},
+    "grid_frequency": {"name": "Frekvence sítě"}, "inverter_temperature": {"name": "Teplota měniče"}, "battery_temperature": {"name": "Teplota baterie"},
+    "battery_soh": {"name": "Stav zdraví baterie"}, "battery_voltage": {"name": "Napětí baterie"}, "battery_current": {"name": "Proud baterie"},
+    "battery_charge_current_limit": {"name": "Limit nabíjecího proudu"}, "battery_discharge_current_limit": {"name": "Limit vybíjecího proudu"},
+    "parallel_power": {"name": "Paralelní výkon"}, "meter_connection_status": {"name": "Stav připojení elektroměru"},
+    "battery_model": {"name": "Model baterie"}, "working_mode": {"name": "Pracovní režim"},
+    "pv_voltage": {"name": "PV{number} napětí"}, "pv_current": {"name": "PV{number} proud"}, "pv_power": {"name": "PV{number} výkon"},
+    "grid_l_voltage": {"name": "Síť L{number} napětí"}, "grid_l_current": {"name": "Síť L{number} proud"}, "grid_l_power": {"name": "Síť L{number} výkon"},
+    "backup_l_voltage": {"name": "Záloha L{number} napětí"}, "backup_l_current": {"name": "Záloha L{number} proud"}, "backup_l_power": {"name": "Záloha L{number} výkon"},
+    "backup_l_frequency": {"name": "Záloha L{number} frekvence"}
+  }}
+}

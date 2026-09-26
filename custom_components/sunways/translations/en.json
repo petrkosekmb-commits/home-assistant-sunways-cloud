@@ -1,0 +1,31 @@
+{
+  "config": {
+    "abort": {"already_configured": "This station is already configured", "reauth_successful": "Re-authentication was successful"},
+    "error": {"cannot_connect": "Failed to connect", "invalid_auth": "Invalid authentication", "no_stations_found": "No stations were found", "unknown": "Unexpected error"},
+    "step": {
+      "user": {"title": "Connect to Sunways Portal", "description": "Enter your Sunways Portal credentials.", "data": {"email": "Email", "password": "Password", "initial_token": "Initial token (optional)"}},
+      "station": {"title": "Choose station", "data": {"station_id": "Station"}},
+      "reauth_confirm": {"title": "Update credentials", "description": "The stored credentials no longer work.", "data": {"email": "Email", "password": "Password"}}
+    }
+  },
+  "options": {"step": {"init": {"title": "Polling", "data": {"scan_interval": "Overview polling interval"}}}},
+  "entity": {"sensor": {
+    "solar_power": {"name": "Solar power"}, "installed_power": {"name": "Installed power"}, "efficiency": {"name": "Efficiency"}, "load_power": {"name": "Load power"},
+    "grid_power": {"name": "Grid power"}, "grid_power_consumption": {"name": "Grid import"}, "grid_power_return": {"name": "Grid export"},
+    "battery_power": {"name": "Battery power"}, "battery_soc": {"name": "Battery state of charge"},
+    "daily_generation": {"name": "Daily generation"}, "monthly_generation": {"name": "Monthly generation"}, "yearly_generation": {"name": "Yearly generation"}, "total_generation": {"name": "Total generation"},
+    "history_sample_time": {"name": "Timestamped sample time"}, "history_sample_age": {"name": "Timestamped sample age"},
+    "history_grid_power": {"name": "Timestamped grid power"}, "history_pv_power": {"name": "Timestamped solar power"}, "history_load_power": {"name": "Timestamped load power"}, "history_battery_power": {"name": "Timestamped battery power"},
+    "cloud_received_at": {"name": "Cloud response received"}, "station_status_code": {"name": "Station status code"},
+    "device_last_update": {"name": "Inverter last update"}, "device_total_hours": {"name": "Total operating time"},
+    "grid_frequency": {"name": "Grid frequency"}, "inverter_temperature": {"name": "Inverter temperature"}, "battery_temperature": {"name": "Battery temperature"},
+    "battery_soh": {"name": "Battery state of health"}, "battery_voltage": {"name": "Battery voltage"}, "battery_current": {"name": "Battery current"},
+    "battery_charge_current_limit": {"name": "Battery charge current limit"}, "battery_discharge_current_limit": {"name": "Battery discharge current limit"},
+    "parallel_power": {"name": "Parallel power"}, "meter_connection_status": {"name": "Meter connection status"},
+    "battery_model": {"name": "Battery model"}, "working_mode": {"name": "Working mode"},
+    "pv_voltage": {"name": "PV{number} voltage"}, "pv_current": {"name": "PV{number} current"}, "pv_power": {"name": "PV{number} power"},
+    "grid_l_voltage": {"name": "Grid L{number} voltage"}, "grid_l_current": {"name": "Grid L{number} current"}, "grid_l_power": {"name": "Grid L{number} power"},
+    "backup_l_voltage": {"name": "Backup L{number} voltage"}, "backup_l_current": {"name": "Backup L{number} current"}, "backup_l_power": {"name": "Backup L{number} power"},
+    "backup_l_frequency": {"name": "Backup L{number} frequency"}
+  }}
+}
