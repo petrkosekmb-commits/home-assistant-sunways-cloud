@@ -42,5 +42,7 @@ Projekt je vydán pod [licencí Apache 2.0](LICENSE).
 
 ## Podpora projektu
 
-Pokud vám integrace pomáhá, po aktivaci podpůrného profilu zde bude zveřejněn odkaz, přes který lze přispět na její další údržbu.
+Vývoj a údržbu můžete podpořit na [Buy Me a Coffee](https://buymeacoffee.com/kojakcio).
+
+
 

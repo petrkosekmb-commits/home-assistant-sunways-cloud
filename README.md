@@ -42,5 +42,6 @@ Licensed under the [Apache License 2.0](LICENSE).
 
 ## Support the project
 
-If this integration helps you, you will be able to support its maintenance through the donation link published here after the support profile is activated.
+Support development and maintenance on [Buy Me a Coffee](https://buymeacoffee.com/kojakcio).
+
 
