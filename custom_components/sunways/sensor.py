@@ -2,6 +2,7 @@
 
 from dataclasses import dataclass
 from typing import Any
+from homeassistant.core import callback
 
 from homeassistant.components.sensor import SensorDeviceClass, SensorEntity, SensorEntityDescription, SensorStateClass
 from homeassistant.const import (
@@ -277,13 +278,23 @@ DEVICE_DESCRIPTIONS = (
 async def async_setup_entry(hass: Any, entry: SunwaysConfigEntry, async_add_entities: AddEntitiesCallback) -> None:
     coordinator = entry.runtime_data.coordinator
     station_entities = [SunwaysSensor(coordinator, entry, description) for description in DESCRIPTIONS]
-    device_entities = [
-        SunwaysDeviceSensor(coordinator, entry, device, description)
-        for device in coordinator.data.get("devices", [])
-        for description in DEVICE_DESCRIPTIONS
-        if device["sensors"].get(description.key) is not None
-    ]
-    async_add_entities([*station_entities, *device_entities])
+    async_add_entities(station_entities)
+    added = set()
+
+    @callback
+    def add_device_entities():
+        entities = []
+        for device in (coordinator.data or {}).get("devices", []):
+            for description in DEVICE_DESCRIPTIONS:
+                key = (device["id"], description.key)
+                if key not in added and device["sensors"].get(description.key) is not None:
+                    entities.append(SunwaysDeviceSensor(coordinator, entry, device, description))
+                    added.add(key)
+        if entities:
+            async_add_entities(entities)
+
+    entry.async_on_unload(coordinator.async_add_listener(add_device_entities))
+    add_device_entities()
 
 
 class SunwaysSensor(CoordinatorEntity[SunwaysDataUpdateCoordinator], SensorEntity):

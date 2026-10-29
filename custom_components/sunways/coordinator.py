@@ -86,4 +86,4 @@ class SunwaysDataUpdateCoordinator(DataUpdateCoordinator[dict[str, Any]]):
             raise ConfigEntryAuthFailed from err
         except (TimeoutError, SunwaysClientException, TypeError, ValueError, KeyError) as err:
             _LOGGER.debug("Sunways device details unavailable: %s", err)
-            return self.data.get("devices", []) if self.data else []
+            return []

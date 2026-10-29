@@ -101,6 +101,7 @@ class SunwaysConfigFlow(ConfigFlow, domain=DOMAIN):
         errors = {}
         if user_input is not None:
             candidate = {**self._data, **user_input}
+            candidate.pop(CONF_INITIAL_TOKEN, None)
             try:
                 await create_sunways_client(self.hass, candidate).get_stations()
                 return self.async_update_reload_and_abort(self._get_reauth_entry(), data=candidate)
